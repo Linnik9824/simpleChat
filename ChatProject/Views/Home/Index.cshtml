@@ -1,0 +1,62 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/Content/Style.css" type="text/css" rel="stylesheet">
+    <title></title>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="main">
+        <div id="loginBlock">
+            Введите логин:<br />
+            <input id="txtUserName" type="text" />
+            <input id="btnLogin" type="button" value="Войти" />
+        </div>        
+        <div class="container" id="chatBody">
+            <h3 class=" text-center">Messaging</h3>
+            <div class="messaging">
+                <div class="inbox_msg">
+                    <div class="inbox_people">
+                        <div class="headind_srch">
+                            <div class="recent_heading">
+                                <h4>Recent</h4>
+                            </div>
+                            <div class="srch_bar">
+                                <div class="stylish-input-group">
+                                    <span class="input-group-addon">
+                                        <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inbox_chat" id="chatusers">
+                        </div>
+                    </div>
+                    <div class="mesgs">
+                        <div class="msg_history" id="chatroom">                            
+                        </div>
+                        <div class="type_msg">
+                            <div class="input_msg_write">
+                                <input type="text" class="write_msg" id="message" placeholder="Type a message" />
+                                <button class="msg_send_btn" id="sendmessage" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input id="hdId" type="hidden" />
+        <input id="username" type="hidden" />
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <!--Ссылка на библиотеку SignalR -->
+    <script src="~/Scripts/jquery.signalR-2.4.0.min.js"></script>
+    <!--Ссылка на автоматически сгенерированный скрипт хаба SignalR -->
+    <script src="~/signalr/hubs"></script>
+    <script src="~/Scripts/util.js"></script>
+</body>
+</html>
